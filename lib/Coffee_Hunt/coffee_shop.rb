@@ -28,9 +28,10 @@ module CoffeeHunt
 
     def details #will display the information about the coffee shops
       <<-HEREDOC
-#{self.name} 
+#{self.name.colorize(:yellow)}
 #{self.location["display_address"].join("\n")}
-#{self.rating}    
+#{self.phone}
+Rating:#{self.rating}    
       HEREDOC
     end
 

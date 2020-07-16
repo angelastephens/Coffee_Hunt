@@ -16,7 +16,7 @@ module CoffeeHunt
       pick_location
       list_coffee_shops
       make_a_selection
-      while @input != "exit"
+      while @input != "exit" && @input != "back"
         if valid?
           @coffee_shop= CoffeeShop.find_by_number(@input)
           puts @coffee_shop.details
@@ -48,15 +48,18 @@ module CoffeeHunt
     end
 
     def list_options
-      puts "Please select a coffee shop by number so you can receive more information!"
+      puts "Please select a coffee shop by number so you can receive more information!".colorize(:cyan)
       puts "If you wish to exit please type 'exit!'"
-      puts "If you would like to return to the list of Coffee Shops then Enter 'back'."
+      puts "To select a different coffee shop please pick another number."
+      puts " Type 'back' to return to the main menu"
+      # puts "If you would like to return to the list of Coffee Shops then Enter 'back'."
 
     end
 
     def make_a_selection
       list_options
       @input = gets.strip
+      start_hunt if @input == 'back'
     end
 
 
