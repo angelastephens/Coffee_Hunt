@@ -51,7 +51,7 @@ module CoffeeHunt
       puts "Please select a coffee shop by number so you can receive more information!".colorize(:cyan)
       puts "If you wish to exit please type 'exit!'"
       puts "To select a different coffee shop please pick another number."
-      puts " Type 'back' to return to the main menu"
+      puts "Type 'back' to return to the main menu"
       # puts "If you would like to return to the list of Coffee Shops then Enter 'back'."
 
     end
