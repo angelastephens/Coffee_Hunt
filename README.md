@@ -1,6 +1,7 @@
 # CoffeeHunt
 Welcome!!! 
-Here is your new gem to help you find the perfect place to get coffee. This gem will help you to locate different coffee shops in a desired area and even show you ratings.  In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Coffee_Hunt`. To experiment with that code, run `bin/console` for an interactive prompt.
+Here is your new gem to help you find the perfect place to get coffee. This gem will help you to locate different coffee shops in a desired area and even show you ratings. 
+This gem is useful for finding caffinated beverages when you are struggling to function. 
 
 
 
