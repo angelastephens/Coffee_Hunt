@@ -24,7 +24,7 @@ Or install it yourself as:
 ## Usage
 
 To get started using this gem simply type  ./bin/coffee_hunt_cli and hit enter in your terminal. 
-Next you will be promted to enter your location. This can be done by typing a City/State or zipcode. 
+Next you will be prompted to enter your location. This can be done by typing a City/State or zipcode. 
 The program will then return a list of coffee shops by location.
 The user or aka coffee hunter will be promted to select a coffee shop to view further details. 
 Once the details have been received, the user can choose another number from the list, return back to the begining or exit. 

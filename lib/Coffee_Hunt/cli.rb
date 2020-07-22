@@ -13,7 +13,13 @@ module CoffeeHunt
       puts "Welcome to Coffee Hunt CLI! ".colorize(:blue).bold
       # puts "Please start by entering your location so we can give you coffee shop suggestions!"
       # binding.pry
+      while @input != "exit" 
       pick_location
+      coffee_shop_operator
+      end 
+    end 
+      
+    def coffee_shop_operator 
       list_coffee_shops
       make_a_selection
       while @input != "exit" && @input != "back"
@@ -26,12 +32,16 @@ module CoffeeHunt
         end
         make_a_selection
       end
+      if @input =="exit" 
+      farewell 
+      end 
     end 
-      
+
+
     def pick_location 
       puts "So we can help you find a tasty caffeinated beverage, please enter your location."
-      @location = gets.chomp
-      CoffeeShop.load_by_location(@location)
+      @input = gets.chomp 
+      CoffeeShop.load_by_location(@input) unless @input == "exit"
     end
 
     def valid?
@@ -58,10 +68,12 @@ module CoffeeHunt
     def make_a_selection
       list_options
       @input = gets.strip
-      start_hunt if @input == 'back'
+      # start_hunt if @input == 'back'
     end
 
-
+    def farewell
+      puts " Thanks for searching for tasty beverages! Happy coffee hunting!"
+    end 
 
 
   end
