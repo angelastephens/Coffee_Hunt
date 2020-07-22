@@ -29,7 +29,7 @@ module CoffeeHunt
     end 
       
     def pick_location 
-      puts "So we can help you find a tasty caffinated beverage, please enter your location."
+      puts "So we can help you find a tasty caffeinated beverage, please enter your location."
       @location = gets.chomp
       CoffeeShop.load_by_location(@location)
     end
@@ -38,7 +38,6 @@ module CoffeeHunt
       @input.to_i.between?(1,CoffeeShop.all.length)
     
     end
-
 
     def list_coffee_shops
       CoffeeShop.all.each.with_index(1) do |coffee,index|

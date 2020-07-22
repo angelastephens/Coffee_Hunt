@@ -42,27 +42,4 @@ Gem::Specification.new do |spec|
 end 
 
 
-#Our gems rely on other gems and we put those here 
-#We run "bundle install after adding" 
-#We have added http gem in this example 
 
-#gemspec 
-  #What other gems depend on. 
-  #Specifies what other gems get installed when you install this gem. 
-
-#gemfile 
-  #specific dependencies for a project. 
-  #Determines what happens when you run bundle install 
-
-
-  #git init   new repo 
-  #bundle gem  "name"   #creates gem and builds a local git repository 
-
-  #git add .  (loads all the changes into the current directory into the staging area) 
-  #git add (specify file) (also an option)
-  
-  #git commit (all the changes in the staging area are committed to the repo)
-
-  #git push (add the commits you have locally to the repo)
-
-  #git commit -am  adds everything and commits it in the current directory  

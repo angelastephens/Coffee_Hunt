@@ -25,7 +25,6 @@ module CoffeeHunt
       @@all[n.to_i-1]
     end 
     
-
     def details #will display the information about the coffee shops
       <<-HEREDOC
 #{self.name.colorize(:yellow)}
@@ -34,10 +33,7 @@ module CoffeeHunt
 Rating:#{self.rating}    
       HEREDOC
     end
-
-
-    
-
+  
     attr_accessor :name, :rating, :location, :price, :phone #defines attributes that are readable and writeable
 
     def initialize(attributes={})
