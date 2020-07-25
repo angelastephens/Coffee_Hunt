@@ -32,7 +32,7 @@ module CoffeeHunt
       location: location
       }
       response = HTTP.auth("Bearer #{api_key}").get(url, params: params)
-      # response.parse
+  
       JSON.parse(response)["businesses"]       
     end
 

@@ -9,13 +9,17 @@ module CoffeeHunt
       @@all
     end
 
-    def self.load_by_location(location)
-      location_results = API.yelp_search("coffee shop", location)
+    def self.load_by_location(location) # returns my array of coffee shops
+      location_results = API.yelp_search("coffee shop", location) 
+      if location_results != nil 
       @@all = self.create_from_results(location_results)
+      else 
+        @@all = []
+      end
       # binding.pry
     end
 
-    def self.create_from_results(location_results)
+    def self.create_from_results(location_results) #returns the collection of coffee shops
       location_results.map do |coffee_shop_hash|
         self.new(coffee_shop_hash)
       end

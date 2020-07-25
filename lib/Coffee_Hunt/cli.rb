@@ -14,9 +14,10 @@ module CoffeeHunt
       # puts "Please start by entering your location so we can give you coffee shop suggestions!"
       # binding.pry
       while @input != "exit" 
-      pick_location
-      coffee_shop_operator
+        pick_location
+        coffee_shop_operator unless @input == "exit"
       end 
+      farewell
     end 
       
     def coffee_shop_operator 
@@ -32,9 +33,6 @@ module CoffeeHunt
         end
         make_a_selection
       end
-      if @input =="exit" 
-      farewell 
-      end 
     end 
 
 
@@ -42,6 +40,10 @@ module CoffeeHunt
       puts "So we can help you find a tasty caffeinated beverage, please enter your location."
       @input = gets.chomp 
       CoffeeShop.load_by_location(@input) unless @input == "exit"
+      if @input != "exit" && CoffeeShop.all.length == 0 
+        puts "Please try again"
+        pick_location
+      end 
     end
 
     def valid?
